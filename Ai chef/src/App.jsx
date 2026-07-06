@@ -1,11 +1,12 @@
 import { useState } from 'react'
-import Header from './Header'
-
+import Header from './HeaderSection'
+import Main from './MainSection'
 
 export default function App(){
     return (
         <>
         <Header/>
+        <Main/>
         </>
     )
 }
