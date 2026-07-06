@@ -1,33 +1,40 @@
 import { useState } from "react"
 import IngredientList from "./components/IngredientList"
 
+export default function Main() {
+    const [ingredient, setIngredient] = useState([])
 
-export default function Main(){
+    function addList(formData) {
+        const name = formData.get("ingredients")
 
-    const [ingredient,setIngredient] = useState([])
-
-    function addList(formData){
-        const name = formData.get('ingredients')
-
-
-        if(name.trim()){
-            setIngredient(item=>[...item , name])
+        if (name.trim()) {
+            setIngredient(prev => [...prev, name])
         }
     }
 
-    return (
+    function remove(itemName) {
+        setIngredient(prev =>
+            prev.filter(item => item !== itemName)
+        )
+    }
+
+  return (
         <>
+            <section className="add-ingredient">
+                <form action={addList}>
+                    <input
+                        type="text"
+                        name="ingredients"
+                        placeholder="e.g. potato"
+                        required
+                    />
+                    <button type="submit">
+                        + Add ingredient
+                    </button>
+                </form>
+            </section>
 
-        <section className="add-ingredient">
-            <form action={addList}>
-                <input type="text" name="ingredients" placeholder="e.g. potato" required/>
-                <button type="submit">+ Add ingredient</button>
-            </form>
-        </section>
-
-        <IngredientList
-         list ={ingredient}/>
-
+            <IngredientList list={ingredient} removeItem={remove} />
         </>
     )
 }

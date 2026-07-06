@@ -1,13 +1,19 @@
 export default function IngredientList(props){
 
-    const render = props.list.map((item, index) => (
-        <li key={`${item}-${index}`}>{item}</li>
+    const renderIngredient = props.list.map((item, index) => (
+        <li
+            key={`${item}-${index}`}
+            onClick={() => props.removeItem(item)}
+        >
+            {item}
+            <i className="fa-solid fa-circle-minus"></i>
+        </li>
     ))
 
-    return (
+   return (
         <section className="ingredient-list">
         {props.list.length>0 ? <h2>Ingredients on hand:</h2> :null}
-        <ul>{render}</ul>
+        <ul>{renderIngredient}</ul>
         </section>
     )
 }

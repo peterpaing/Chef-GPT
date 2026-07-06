@@ -83,6 +83,9 @@ header h1{
 }
 
 .ingredient-list ul li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin: 1.125em 0.9375em;
     font-weight: 400;
     font-size: 1.125rem;
@@ -90,8 +93,14 @@ header h1{
     color: #475467;
 }
 
+.fa-circle-minus{
+    font-size: 1.125rem;
+    margin-left: 0.8em;
+}
 
-
+.fa-circle-minus:hover{
+    color:rgb(249, 135, 135);
+}
 
 @media (min-width: 768px){
 
