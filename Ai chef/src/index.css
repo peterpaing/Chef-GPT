@@ -67,6 +67,10 @@ header h1{
     border: none;
 }
 
+.add-ingredient button:hover,.add-ingredient button:focus{
+    background-color: #242423;
+}
+
 .ingredient-list{
     display: flex;
     flex-direction: column;
@@ -95,7 +99,7 @@ header h1{
 }
 
 .fa-circle-minus{
-    font-size: 1.125rem;
+    font-size: 1.2rem;
     margin-left: 0.8em;
 }
 
@@ -143,7 +147,9 @@ header h1{
     border: none;
     outline: none;
 }
-
+.generate-recipe button:hover,.generate-recipe button:focus{
+    background-color: #c7664d;
+}
 @media (min-width: 768px){
 
     .add-ingredient form{

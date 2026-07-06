@@ -17,7 +17,7 @@ export default function IngredientList(props){
         <ul>{renderIngredient}</ul>
         </section>
 
-        {props.list.length>3 ? <section className="generate-recipe">
+        {props.list.length>2 ? <section className="generate-recipe">
             <div>
             <h3>Ready for a recipe?</h3>
             <p>Generate a recipe from your list of ingredients.</p>
