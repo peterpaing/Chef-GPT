@@ -7,7 +7,7 @@ export default function Main() {
     function addList(formData) {
         const name = formData.get("ingredients")
 
-        if (name.trim()) {
+        if (name.trim() && !ingredient.includes(name)) {
             setIngredient(prev => [...prev, name])
         }
     }

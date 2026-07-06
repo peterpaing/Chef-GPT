@@ -11,9 +11,19 @@ export default function IngredientList(props){
     ))
 
    return (
+            <>
         <section className="ingredient-list">
         {props.list.length>0 ? <h2>Ingredients on hand:</h2> :null}
         <ul>{renderIngredient}</ul>
         </section>
+
+        {props.list.length>3 ? <section className="generate-recipe">
+            <div>
+            <h3>Ready for a recipe?</h3>
+            <p>Generate a recipe from your list of ingredients.</p>
+            </div>
+            <button type="button">Get a recipe</button>
+        </section>:''}
+        </>
     )
 }
