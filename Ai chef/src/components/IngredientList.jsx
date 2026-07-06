@@ -3,10 +3,9 @@ export default function IngredientList(props){
     const renderIngredient = props.list.map((item, index) => (
         <li
             key={`${item}-${index}`}
-            onClick={() => props.removeItem(item)}
         >
             {item}
-            <i className="fa-solid fa-circle-minus"></i>
+            <i className="fa-solid fa-circle-minus" onClick={() => props.removeItem(item)}></i>
         </li>
     ))
 
