@@ -34,30 +34,30 @@ header h1{
     letter-spacing: -5%;
 }
 
-.ingredient-list form{
+.add-ingredient form{
     width: 100%;
-    margin-top: 50px;
-    margin-bottom: 48px;
+    margin-top: 3.125em;
+    margin-bottom: 1.875em;
     display:flex;
     justify-content: center;
     align-items: center;
-    gap:12px;
+    gap:0.75em;
 }
 
-.ingredient-list input{
+.add-ingredient input{
     width: 50%;
     max-width: 339px;
     height: 38px;
-    padding: 9px 13px;
+    padding: 0.5625em 0.8125em;
     font-family: "Inter", sans-serif;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 20px;
     border: 1px solid #D1D5DB;
     border-radius: 6px;
 }
 
-.ingredient-list button{
+.add-ingredient button{
     max-width: 183px;
     width: 35%;
     height: 38px;
@@ -65,4 +65,41 @@ header h1{
     color:#FAFAF8;
     background-color: #141413;
     border: none;
+}
+
+.ingredient-list{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    max-width: 594px;
+    margin: 0 auto;
+    gap: 0.625em;
+}
+
+.ingredient-list h2{
+    font-weight: 600;
+    font-size: 1.5625rem;
+    line-height: 38px;
+}
+
+.ingredient-list ul li{
+    margin: 1.125em 0.9375em;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 28px;
+    color: #475467;
+}
+
+
+
+
+@media (min-width: 768px){
+
+    .add-ingredient form{
+        margin-bottom: 2.5rem;
+    }
+
+    .ingredient-list{
+        padding-left: 1.9rem;
+    }
 }
