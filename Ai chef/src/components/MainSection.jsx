@@ -1,5 +1,5 @@
 import { useState } from "react"
-import IngredientList from "./components/IngredientList"
+import IngredientList from "./IngredientList"
 
 export default function Main() {
     const [ingredient, setIngredient] = useState([])
@@ -8,7 +8,7 @@ export default function Main() {
         const name = formData.get("ingredients")
 
         if (name.trim() && !ingredient.includes(name)) {
-            setIngredient(prev => [...prev, name])
+            setIngredient(prev => [name,...prev])
         }
     }
 

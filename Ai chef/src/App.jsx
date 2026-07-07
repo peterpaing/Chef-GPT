@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import Header from './HeaderSection'
-import Main from './MainSection'
+import Header from './components/HeaderSection'
+import Main from './components/MainSection'
 
 export default function App(){
     return (

@@ -85,6 +85,7 @@ header h1{
     flex-direction: column;
     width: 85%;
     max-width: 600px;
+    height: 200px;
     margin: 0 auto;
     gap: 0.625em;
 }
@@ -94,7 +95,10 @@ header h1{
     font-size: 1.5625rem;
     line-height: 38px;
 }
+
 .ingredient-list ul{
+    max-height: 200px;
+    overflow: auto;
    display: flex;
    flex-wrap: wrap;
     gap:1em;
@@ -123,6 +127,18 @@ header h1{
 .ingredient-list ul li:hover{
     color:rgb(249, 135, 135);
     border: 1px solid rgb(249, 135, 135);
+}
+
+.warning{
+    font-size: 1rem;
+    line-height: 38px;
+    color:rgb(249, 135, 135) ;
+    display: flex;
+    align-items: center;
+    gap:0.5em;
+}
+.fa-circle-exclamation{
+    font-size:1.4em ;
 }
 
 .generate-recipe{
