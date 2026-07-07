@@ -4,6 +4,15 @@
     padding: 0;
 }
 
+html, body {
+ overflow-y: auto;
+ &::-webkit-scrollbar {
+    display: none;
+  }
+scrollbar-width: none;
+-ms-overflow-style: none;
+}
+
 body{
     background-color:#FAFAF8;
     width: 100vw;
@@ -85,26 +94,35 @@ header h1{
     font-size: 1.5625rem;
     line-height: 38px;
 }
+.ingredient-list ul{
+   display: flex;
+   flex-wrap: wrap;
+    gap:1em;
+}
+
 
 .ingredient-list ul li{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 1.125em 0.9375em;
     font-weight: 400;
-    font-size: 1.125rem;
+    font-size: 0.9rem;
     line-height: 28px;
     color: #475467;
-    border-bottom: 1px solid rgba(71, 84, 103, 0.2);
+    list-style: none;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 0.1em 0.5em 0.1em 1em;
+    border-radius: 8px;
+    gap:0.5em;
 }
 
-.fa-circle-minus{
-    font-size: 1.2rem;
-    margin-left: 0.8em;
+.fa-xmark{
+    font-size: 0.7rem;
+    margin-left: 0.3em;
 }
 
-.fa-circle-minus:hover{
+.ingredient-list ul li:hover{
     color:rgb(249, 135, 135);
+    border: 1px solid rgb(249, 135, 135);
 }
 
 .generate-recipe{

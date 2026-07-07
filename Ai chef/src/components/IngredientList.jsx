@@ -5,7 +5,7 @@ export default function IngredientList(props){
             key={`${item}-${index}`}
         >
             {item}
-            <i className="fa-solid fa-circle-minus" onClick={() => props.removeItem(item)}></i>
+            <i className="fa-solid fa-xmark" onClick={() => props.removeItem(item)}></i>
         </li>
     ))
 
