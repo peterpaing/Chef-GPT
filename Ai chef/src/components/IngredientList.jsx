@@ -12,7 +12,7 @@ export default function IngredientList(props){
    return (
             <>
         <section className="ingredient-list">
-        {props.list.length>0 ?<h2>Ingredients on hand:</h2>:null}
+        {props.list.length>0 ?<h2>On-Hand Ingredients:</h2>:null}
         <ul>{renderIngredient}</ul>
         {props.list.length>0 && props.list.length<3 ?<div className="warning"><i class="fa-solid fa-circle-exclamation"></i><p>Please add at least 3 ingredients</p> </div>: ''}
         </section>
