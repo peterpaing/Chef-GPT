@@ -1,5 +1,7 @@
 import { useState } from "react"
 import IngredientList from "./IngredientList"
+import getAiResponse from '../Ai'
+
 
 export default function Main() {
     const [ingredient, setIngredient] = useState([])
@@ -18,6 +20,15 @@ export default function Main() {
         )
     }
 
+
+     const [meal , setMeal] = useState('')
+
+   async function generate() {
+    const response = await getAiResponse(ingredient.join(", "))
+    setMeal(response)
+    console.log(response)
+}
+
   return (
         <>
             <section className="add-ingredient">
@@ -34,7 +45,7 @@ export default function Main() {
                 </form>
             </section>
 
-            <IngredientList list={ingredient} removeItem={remove} />
+            <IngredientList list={ingredient} removeItem={remove} getRecipe={generate} meals={meal}/>
         </>
     )
 }

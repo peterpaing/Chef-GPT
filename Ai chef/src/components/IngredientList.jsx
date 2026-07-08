@@ -14,15 +14,16 @@ export default function IngredientList(props){
         <section className="ingredient-list">
         {props.list.length>0 ?<h2>On-Hand Ingredients:</h2>:null}
         <ul>{renderIngredient}</ul>
-        {props.list.length>0 && props.list.length<3 ?<div className="warning"><i class="fa-solid fa-circle-exclamation"></i><p>Please add at least 3 ingredients</p> </div>: ''}
+        {props.list.length>0 && props.list.length<3 ?<div className="warning"><i className="fa-solid fa-circle-exclamation"></i><p>Please add at least 3 ingredients</p> </div>: ''}
         </section>
             {props.list.length>2 ? <section className="generate-recipe">
             <div>
             <h3>Ready for a recipe?</h3>
             <p>Generate a recipe from your list of ingredients.</p>
             </div>
-            <button type="button">Get a recipe</button>
+            <button type="button" onClick={props.getRecipe}>Get a recipe</button>
         </section>:''}
+        <div>{props.meals}</div>
         </>
     )
 }
