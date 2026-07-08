@@ -1,3 +1,5 @@
+import { marked } from "marked"
+
 export default function IngredientList(props){
 
     const renderIngredient = props.list.map((item, index) => (
@@ -21,9 +23,17 @@ export default function IngredientList(props){
             <h3>Ready for a recipe?</h3>
             <p>Generate a recipe from your list of ingredients.</p>
             </div>
-            <button type="button" onClick={props.getRecipe}>Get a recipe</button>
+            <button type="button" 
+            onClick={props.getRecipe}
+            disabled={props.loading}
+            >Get a recipe</button>
         </section>:''}
-        <div>{props.meals}</div>
+        {props.loading && <p>🍳 Creating your perfect recipe...</p>}
+        {!props.loading && <div
+            dangerouslySetInnerHTML={{
+                __html: marked(props.meals)
+            }}
+        />}
         </>
     )
 }

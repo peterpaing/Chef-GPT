@@ -22,11 +22,20 @@ export default function Main() {
 
 
      const [meal , setMeal] = useState('')
+     const [loading, setLoading] = useState(false)
 
-   async function generate() {
-    const response = await getAiResponse(ingredient.join(", "))
-    setMeal(response)
-    console.log(response)
+    async function generate() {
+    setLoading(true)
+
+    try {
+        const response = await getAiResponse(ingredient.join(", "));
+        setMeal(response)
+    } catch (err) {
+        console.error(err)
+        setMeal("Something went wrong. Please try again.");
+    } finally {
+        setLoading(false)
+    }
 }
 
   return (
@@ -45,7 +54,12 @@ export default function Main() {
                 </form>
             </section>
 
-            <IngredientList list={ingredient} removeItem={remove} getRecipe={generate} meals={meal}/>
+            <IngredientList 
+            list={ingredient}
+             removeItem={remove} 
+             getRecipe={generate}
+              meals={meal} 
+              loading={loading}/>
         </>
     )
 }
