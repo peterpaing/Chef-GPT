@@ -12,11 +12,11 @@ export async function getAiResponse(messageText) {
             })
         });
 
-        const aiReply = await res.text();
-        console.log("AI Answer:", aiReply);
-        return aiReply;
+        const aiReply = await res.text()
+        console.log("AI Answer:", aiReply)
+        return aiReply
     } catch (err) {
-        console.log(err);
+        console.log(err)
     }
 }
 
