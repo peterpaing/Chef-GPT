@@ -210,6 +210,14 @@ header h1{
     }
 }
 
+@media (min-width: 768px) and (max-width: 1024px){
+    .ingredient-list{
+        width: 65%;
+        max-width: 600px;
+        
+    }
+}
+
 @media (min-width: 1025px){
 
     .add-ingredient form{
@@ -217,8 +225,9 @@ header h1{
     }
 
     .ingredient-list{
-        width: 70%;
-        max-width: 700px;
+        width: 35%;
+        max-width: 600px;
+        
     }
 
    .cooking{
