@@ -99,7 +99,7 @@ src/
 
 ## 📸 Preview
 
-![mobile-preview](./src/assets/preview.png)
+![mobile-preview](./Ai%20chef/src/assets/preview.png)
 
 ---
 
