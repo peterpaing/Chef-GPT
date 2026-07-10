@@ -52,7 +52,7 @@ Chef GPT is a React application that helps users create delicious meals using th
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/ai-chef.git
+git clone https://github.com/peterpaing/ai-chef.git
 ```
 
 Navigate into the project:
