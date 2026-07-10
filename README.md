@@ -1,6 +1,6 @@
-# 🍳 AI Chef
+# 🍳 Chef GPT
 
-AI Chef is a React application that helps users create delicious meals using the ingredients they already have at home. Simply add at least three ingredients, and AI will analyze them to generate the single best recipe tailored to your available ingredients.
+Chef GPT is a React application that helps users create delicious meals using the ingredients they already have at home. Simply add at least three ingredients, and AI will analyze them to generate the single best recipe tailored to your available ingredients.
 
 ---
 
